@@ -4,8 +4,6 @@ import {
   createUser,
   signOut,
   checkAuth,
-  resetPasswordRequest,
-  resetPassword,
 } from './authAPI';
 import { updateUser } from '../user/userAPI';
 

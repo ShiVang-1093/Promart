@@ -74,7 +74,7 @@ export default function Cart() {
                           <h3>
                             <a href={item.product.id}>{item.product.title}</a>
                           </h3>
-                          <p className="ml-4">${item.product.discountPrice}</p>
+                          <p className="ml-4">Rs.{item.product.discountPrice}</p>
                         </div>
                         <p className="mt-1 text-sm text-gray-500">
                           {item.product.brand}
@@ -129,7 +129,7 @@ export default function Cart() {
           <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
             <div className="flex justify-between my-2 text-base font-medium text-gray-900">
               <p>Subtotal</p>
-              <p>$ {totalAmount}</p>
+              <p>Rs. {totalAmount}</p>
             </div>
             <div className="flex justify-between my-2 text-base font-medium text-gray-900">
               <p>Total Items in Cart</p>

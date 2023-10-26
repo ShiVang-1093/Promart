@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   fetchLoggedInUserOrderAsync,
-  selectUserInfo,
   selectUserInfoStatus,
   selectUserOrders,
 } from '../userSlice';
@@ -48,7 +47,7 @@ export default function UserOrders() {
                               <h3>
                                 <a href={item.product.id}>{item.product.title}</a>
                               </h3>
-                              <p className="ml-4">${item.product.discountPrice}</p>
+                              <p className="ml-4">Rs.{item.product.discountPrice}</p>
                             </div>
                             <p className="mt-1 text-sm text-gray-500">
                               {item.product.brand}
@@ -76,7 +75,7 @@ export default function UserOrders() {
               <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                 <div className="flex justify-between my-2 text-base font-medium text-gray-900">
                   <p>Subtotal</p>
-                  <p>$ {order.totalAmount}</p>
+                  <p>Rs. {order.totalAmount}</p>
                 </div>
                 <div className="flex justify-between my-2 text-base font-medium text-gray-900">
                   <p>Total Items in Cart</p>
