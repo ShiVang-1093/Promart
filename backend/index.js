@@ -27,18 +27,6 @@ const { Order } = require('./model/Order');
 const { env } = require('process');
 
 
-// Email
-// const transporter = nodemailer.createTransport({
-//   host: "smtp.gmail.com",
-//   port: 587,
-//   secure: false,
-//   auth: {
-//     user: '21dit064@charusat.edu.in',
-//     pass: process.env.EMAIL_PASSWORD 
-//   }
-// });
-
-
 // Webhook
 server.use(cors()); 
 
@@ -120,17 +108,7 @@ server.get('*', (req, res) =>
   res.sendFile(path.resolve('build', 'index.html'))
 );
 
-// server.post('/mail', async (req, res) => {
-//   const {to} = req.body;
-//   const info = await transporter.sendMail({
-//     from: '"Promart" <21dit064@charusat.edu.in.com>', 
-//     to: to, 
-//     subject: "Hello ✔", 
-//     text: "Hello world?", 
-//     html: "<b>Hello world?</b>", 
-//   });
-//   res.json(info);
-// });
+
 
 
 // Passport Strategies

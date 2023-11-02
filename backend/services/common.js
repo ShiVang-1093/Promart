@@ -11,7 +11,6 @@ let transporter = nodemailer.createTransport({
   },
 });
 
-
 exports.isAuth = (req, res, done) => {
   return passport.authenticate('jwt');
 };
@@ -356,6 +355,4 @@ exports.invoiceTemplate = function(order){
 </body>
 </html>`
  )
-
-
 }
